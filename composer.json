@@ -2,7 +2,7 @@
     "name": "mkostryukov/ap-yii",
     "description": "AP Yii Project",
     "keywords": ["ap"],
-    "homepage": "",
+    "homepage": "http://www.allprojectors.ru",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
@@ -14,7 +14,8 @@
         "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "bower-asset/admin-lte": "^2.3"
+        "bower-asset/admin-lte": "^2.3",
+        "rmrevin/yii2-fontawesome": "~2.15"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
