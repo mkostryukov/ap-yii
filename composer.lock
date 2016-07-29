@@ -4,9 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "914f9194a4d021de88b285b03e683984",
-    "content-hash": "e1929a97e872bdbaacc8530468eccb67",
+    "hash": "9d219e41050f46edea257523fc45f2c5",
+    "content-hash": "457025c021a6f1c78c8bb9718137df89",
     "packages": [
+        {
+            "name": "bower-asset/admin-lte",
+            "version": "v2.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/almasaeed2010/AdminLTE.git",
+                "reference": "0ab2eb7f382e79810ebf3032ce766a02af2b0f3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/0ab2eb7f382e79810ebf3032ce766a02af2b0f3b",
+                "reference": "0ab2eb7f382e79810ebf3032ce766a02af2b0f3b",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "index2.html",
+                    "dist/css/AdminLTE.css",
+                    "dist/js/app.js",
+                    "build/less/AdminLTE.less"
+                ],
+                "bower-asset-ignore": [
+                    "/.*",
+                    "node_modules",
+                    "bower_components",
+                    "composer.json",
+                    "documentation"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Admin dashboard and control panel template",
+            "keywords": [
+                "admin",
+                "backend",
+                "bootstrap",
+                "css",
+                "html",
+                "js",
+                "responsive",
+                "template",
+                "theme"
+            ]
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.7",
