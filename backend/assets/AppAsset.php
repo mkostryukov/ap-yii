@@ -33,7 +33,8 @@ class AppAsset extends AssetBundle
     ];
 
     public $js = [
-        'admin-lte/dist/js/app.min.js'
+        'admin-lte/dist/js/app.min.js',
+        'jquery-slimscroll/jquery.slimscroll.min.js',
     ];
 
     public $depends = [
