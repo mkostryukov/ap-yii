@@ -17,12 +17,16 @@ class SiteController extends Controller
      */
     public function behaviors()
     {
+/*        if (Yii::$app->user->isGuest)
+            die('guest');
+        else
+            die('auth');*/
         return [
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['error'],
                         'allow' => true,
                     ],
                     [
@@ -60,28 +64,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
         return $this->render('index');
-    }
-
-    /**
-     * Login action.
-     *
-     * @return string
-     */
-    public function actionLogin()
-    {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
-        }
     }
 
     /**

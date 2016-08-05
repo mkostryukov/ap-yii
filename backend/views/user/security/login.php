@@ -6,6 +6,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use dektrium\user\widgets\Connect;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
@@ -22,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id' => 'login-form',
                 ]); ?>
 
-                <?= $form->field($model, 'username', [
+                <?= $form->field($model, 'login', [
                     'options' => ['class' => 'form-group has-feedback'],
                     'template' => "{label}\n{input}\n<span class=\"glyphicon glyphicon-user form-control-feedback\"></span>\n{hint}\n{error}",
                     ])->textInput(['autofocus' => true]) ?>
@@ -46,5 +47,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
 
             <?php ActiveForm::end(); ?>
+
+            <?= Connect::widget([
+                'baseAuthUrl' => ['/user/security/auth'],
+            ]) ?>
     </div>
 </div>

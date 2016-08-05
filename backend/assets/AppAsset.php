@@ -27,8 +27,8 @@ class AppAsset extends AssetBundle
      * @inheritdoc
      */
     public $js = [
-        'admin-lte/dist/js/app.min.js',
         'jquery-slimscroll/jquery.slimscroll.min.js',
+        'admin-lte/dist/js/app.min.js',
     ];
 
     /**
@@ -57,7 +57,7 @@ class AppAsset extends AssetBundle
             if (('skin-blue' !== $this->skin) && (strpos($this->skin, 'skin-') !== 0)) {
                 throw new Exception('Invalid skin specified');
             }
-            $this->css[] = sprintf('css/skins/%s.min.css', $this->skin);
+            $this->css[] = sprintf('admin-lte/dist/css/skins/%s.min.css', $this->skin);
         }
         parent::init();
     }}
