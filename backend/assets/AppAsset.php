@@ -47,6 +47,8 @@ class AppAsset extends AssetBundle
      */
     public $skin = 'skin-blue';
 
+    public $bodyClass = 'hold-transition sidebar-mini';
+
     /**
      * @inheritdoc
      */
