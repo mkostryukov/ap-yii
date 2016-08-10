@@ -3,16 +3,11 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use backend\assets\AppAsset;
-use backend\helpers\AppAssetHelper;
+use backend\assets\AdminLTEAssetBundle;
+use backend\helpers\AdminLTEAssetHelper;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
 
-AppAsset::register($this);
-$directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/bower/admin-lte/dist');
+AdminLTEAssetBundle::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -25,25 +20,29 @@ $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/bower/admin-
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="<?= AppAssetHelper::bodyClass() ?> <?= AppAssetHelper::skinClass() ?>">
+<body class="<?= AdminLTEAssetHelper::bodyClass() ?> <?= AdminLTEAssetHelper::skinClass() ?>">
 <?php $this->beginBody() ?>
 
 <div class="wrapper">
 
     <?= $this->render(
-        'header.php',
-        ['directoryAsset' => $directoryAsset]
+        'header.php'
     ) ?>
 
     <?= $this->render(
-        'left.php',
-        ['directoryAsset' => $directoryAsset]
+        'left.php'
     ) ?>
 
     <?= $this->render(
         'content.php',
-        ['content' => $content, 'directoryAsset' => $directoryAsset]
+        ['content' => $content]
     ) ?>
+
+    <?= $this->render(
+        'footer.php'
+    ) ?>
+
+    <?= AdminLTEAssetHelper::rightSidebar()?$this->render('right.php'):'' ?>
 
 </div>
 
